@@ -18,13 +18,7 @@ export const imageUpload = async (images) => {
     formData.append("upload_preset", "nfp8ghae");
     formData.append("cloud_name", "dzf4tpuya");
 
-    const res = await fetch(
-      "https://api.cloudinary.com/v1_1/dzf4tpuya/image/upload",
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
+   
 
     const data = await res.json();
     imgArr.push({ public_id: data.public_id, url: data.secure_url });
