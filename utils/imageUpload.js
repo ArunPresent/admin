@@ -15,10 +15,7 @@ export const imageUpload = async (images) => {
     } else {
       formData.append("file", item);
     }
-    formData.append("upload_preset", "nfp8ghae");
-    formData.append("cloud_name", "dzf4tpuya");
-
-   
+ 
 
     const data = await res.json();
     imgArr.push({ public_id: data.public_id, url: data.secure_url });
